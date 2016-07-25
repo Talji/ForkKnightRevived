@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour {
 	PlayerScript pScript;
 	Transform weapon;
 	Score score; 
+	public AudioClip hurtSound;
+
 
 
 	void Start(){
@@ -18,12 +20,20 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	void Update (){
+<<<<<<< HEAD
 		
 
+=======
+		if (transform.position.y < -5) {
+			Debug.Log ("PLAYERDEAD");
+			Application.LoadLevel("GameOver");
+		}
+>>>>>>> refs/remotes/origin/Resurrect
 	}
 
 	public void AdjustCurrentHealth(int adj) {
 		currentHealth += adj;
+		audio.PlayOneShot(hurtSound);
 
 		if (currentHealth < 1)
 			 currentHealth = 0;
@@ -37,10 +47,13 @@ public class PlayerHealth : MonoBehaviour {
 		healthguiScript.modifyHealth (currentHealth);
 
 		if (currentHealth <= 0) {
-			Debug.Log ("PLAYER DEAD");
+			//Debug.Log ("PLAYER DEAD");
 			score = GameObject.Find ("Score").GetComponent<Score>();
-			score.GOMsg = "GAME OVER\n";
+			score.checkFinalScore();
 
+
+            GameObject spawnerend = GameObject.Find("Spawners");
+            Destroy(spawnerend);
 			pScript.enabled = false;
 			SpriteRenderer sprite = GetComponent<SpriteRenderer>();
 			BoxCollider2D hitbox = GetComponent<BoxCollider2D>();
@@ -54,7 +67,12 @@ public class PlayerHealth : MonoBehaviour {
 			rigidbody2D.AddForce(new Vector2(0f, 800f));
 			sprite.sortingOrder = 8;
 
+<<<<<<< HEAD
 
+=======
+			//reload level
+			//Application.LoadLevel(Application.loadedLevel);
+>>>>>>> refs/remotes/origin/Resurrect
 		}
 
 	}

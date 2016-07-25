@@ -1,6 +1,7 @@
 ForkKnightGame
 ==============
 
+<<<<<<< HEAD
 5/05/2014
 -----------------------------
 An android version of the project has been created. It should work on most current android devices (tablets, phones, etc).
@@ -30,3 +31,12 @@ The game can be started by tapping the "Play" button at the bottom of the landin
 The goal of the game is the same as the Web version, survive for as long as possible and obtain the highest score. For the mobile version jumping has been disabled and there is no "Replay Button" implemented. To start a 'new' game, the user will have to exit the game manually by touching the 'home' key on their android device and also end the 'Active Application'. This is a barbaric way to end the mobile version but there will (hopefully) be a more robust option in the future.
 
 Thanks!
+=======
+Fork Knight is a 2D Medieval Horror/Survival game that  features Perry the Peasant as he braves an onslaught of the living dead with a pitchfork to take his farm back. 
+
+http://www.forkknightthegame.com/
+
+Instructions:
+
+Press space to attack. Use your agricultural implement to the best of your ability to survive the zombie onslaught. 
+>>>>>>> refs/remotes/origin/Resurrect
