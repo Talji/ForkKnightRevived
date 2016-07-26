@@ -1,7 +1,17 @@
 ForkKnightGame
-==============
 
 <<<<<<< HEAD
+==============
+7/26/2016
+/reboot
+-----------------------------
+Today marks the restart on Fork Knight! 
+Slack, Github, and other resources will be used during this project to bring us closer to the vision the original creators had in their head for this project. The only major goal at the end of this project is to have something that is playable and is fun! Stay tuned for more updates as we work towards our goal!
+
+
+
+
+
 5/05/2014
 -----------------------------
 An android version of the project has been created. It should work on most current android devices (tablets, phones, etc).
