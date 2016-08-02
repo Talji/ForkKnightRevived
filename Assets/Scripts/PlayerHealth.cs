@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void AdjustCurrentHealth(int adj) {
 		currentHealth += adj;
-		audio.PlayOneShot(hurtSound);
+		GetComponent<AudioSource>().PlayOneShot(hurtSound);
 
 		if (currentHealth < 1)
 			 currentHealth = 0;
@@ -52,13 +52,13 @@ public class PlayerHealth : MonoBehaviour {
 			SpriteRenderer sprite = GetComponent<SpriteRenderer>();
 			BoxCollider2D hitbox = GetComponent<BoxCollider2D>();
 			weapon = pScript.weapon.transform;
-			pScript.weapon.AddComponent("Rigidbody2D");
-			pScript.weapon.rigidbody2D.fixedAngle = true;
+			pScript.weapon.AddComponent<Rigidbody2D>();
+			pScript.weapon.GetComponent<Rigidbody2D>().fixedAngle = true;
 			weapon.parent = null;
 			hitbox.isTrigger = true;
-			rigidbody2D.gravityScale = 10;
+			GetComponent<Rigidbody2D>().gravityScale = 10;
 			//enemy death anim (up and fall through ground)
-			rigidbody2D.AddForce(new Vector2(0f, 800f));
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 800f));
 			sprite.sortingOrder = 8;
 
 			//reload level

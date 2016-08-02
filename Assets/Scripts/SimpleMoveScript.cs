@@ -19,7 +19,7 @@ public class SimpleMoveScript : MonoBehaviour {
 	
 	void FixedUpdate()
 	{
-		rigidbody2D.velocity = movement;
+		GetComponent<Rigidbody2D>().velocity = movement;
 	}
 }
 

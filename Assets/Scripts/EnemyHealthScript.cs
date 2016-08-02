@@ -34,7 +34,7 @@ public class EnemyHealthScript : MonoBehaviour {
 
 	public void AdjustCurrentHealth(int adj) {
 		currentHealth += adj;
-		audio.PlayOneShot(enemyHurt);
+		GetComponent<AudioSource>().PlayOneShot(enemyHurt);
 
 		if (maxHealth < 1)
 			maxHealth = 1;
@@ -51,7 +51,7 @@ public class EnemyHealthScript : MonoBehaviour {
 			BoxCollider2D hitbox = GetComponent<BoxCollider2D>();
 
 			//enemy death anim (up and fall through ground)
-			rigidbody2D.AddForce(new Vector2(0f, 200f));
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 200f));
 			hitbox.isTrigger = true;
 			sprite.sortingOrder = 8;
 			

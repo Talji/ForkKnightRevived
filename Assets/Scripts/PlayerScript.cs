@@ -58,10 +58,10 @@ public class PlayerScript : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		rigidbody2D.velocity = new Vector2 (movement, 0);
+		GetComponent<Rigidbody2D>().velocity = new Vector2 (movement, 0);
 
 		if (jumping) {
-			rigidbody2D.AddForce (new Vector2 (0f, moddedJumpForce));
+			GetComponent<Rigidbody2D>().AddForce (new Vector2 (0f, moddedJumpForce));
 			moddedJumpForce -= 40;
 		}
 	}

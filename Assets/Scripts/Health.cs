@@ -64,12 +64,12 @@ public class Health : MonoBehaviour {
 		foreach (Transform heart in hearts) {
 			
 			if (restAreEmpty) {
-				heart.guiTexture.texture = heartImages[0]; // heart is empty
+				heart.GetComponent<GUITexture>().texture = heartImages[0]; // heart is empty
 			}
 			else {
 				i += 1; // current iteration
 				if (currentHealth >= i * healthPerHeart) {
-					heart.guiTexture.texture = heartImages[heartImages.Length-1]; // health of current heart is full
+					heart.GetComponent<GUITexture>().texture = heartImages[heartImages.Length-1]; // health of current heart is full
 				}
 				else {
 					int currentHeartHealth = (int)(healthPerHeart - (healthPerHeart * i - currentHealth));
@@ -81,7 +81,7 @@ public class Health : MonoBehaviour {
 					//	imageIndex = 1;
 					//}
 
-					heart.guiTexture.texture = heartImages[currentHeartHealth];
+					heart.GetComponent<GUITexture>().texture = heartImages[currentHeartHealth];
 					restAreEmpty = true;
 				}
 			}

@@ -12,7 +12,7 @@ public class Score : MonoBehaviour
 
 	void Update ()	{
 		// Set the score text.
-		guiText.text = " " + GOMsg + score;
+		GetComponent<GUIText>().text = " " + GOMsg + score;
 
 	}
 
